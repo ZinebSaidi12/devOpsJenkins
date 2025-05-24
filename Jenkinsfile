@@ -29,7 +29,7 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        /*stage('Deploy') {
             steps {
                 sh 'echo "Deploying the application..."'
                 sh 'ssh user@remote-server "docker pull ${DOCKER_HUB_CREDENTIALS_USR}/my-python-app:latest"'
@@ -37,6 +37,6 @@ pipeline {
                 sh 'ssh user@remote-server "docker rm my-python-app || true"'
                 sh 'ssh user@remote-server "docker run -d -p 5000:5000 --name my-python-app ${DOCKER_HUB_CREDENTIALS_USR}/my-python-app:latest"'
             }
-        }
+        }*/
     }
 }
